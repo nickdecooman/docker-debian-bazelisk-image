@@ -5,3 +5,7 @@ The base image is [`python:3.10-slim`](https://hub.docker.com/_/python) and the 
 
 * [Bazelisk](https://github.com/bazelbuild/bazelisk)
 * [bazel-remote](https://github.com/buchgr/bazel-remote)
+
+## Docker Hub
+
+The image can be pulled from Docker Hub: [https://hub.docker.com/r/nickdecooman/debian-bazelisk](https://hub.docker.com/r/nickdecooman/debian-bazelisk)
