@@ -3,7 +3,7 @@ FROM python:3.10-slim
 ENV DEBIAN_FRONTEND="noninteractive"
 
 RUN apt-get -qqy update && \
-    apt-get -qqy install curl make openssl ca-certificates git build-essential zip && \
+    apt-get -qqy install curl make openssl ca-certificates git build-essential zip unzip && \
     apt-get clean && rm -rf /var/lib/{apt,dpkg,cache,log}/
 
 RUN curl -fLo /usr/local/bin/bazel https://github.com/bazelbuild/bazelisk/releases/download/v1.11.0/bazelisk-linux-amd64 && \
