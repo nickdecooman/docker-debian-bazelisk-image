@@ -6,6 +6,8 @@ RUN apt-get -qqy update && \
     apt-get -qqy install curl make openssl ca-certificates git build-essential zip unzip jq libz-dev && \
     apt-get clean && rm -rf /var/lib/{apt,dpkg,cache,log}/
 
+RUN curl -fLo /usr/bin/yq https://github.com/mikefarah/yq/releases/download/v4.2.0/yq_linux_amd64 && chmod +x /usr/bin/yq
+
 RUN curl -fLo /usr/local/bin/bazel https://github.com/bazelbuild/bazelisk/releases/download/v1.11.0/bazelisk-linux-amd64 && \
 		chown root:root /usr/local/bin/bazel && \
     chmod +x /usr/local/bin/bazel
