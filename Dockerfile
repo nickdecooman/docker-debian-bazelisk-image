@@ -8,10 +8,10 @@ RUN apt-get -qqy update && \
 
 RUN curl -fLo /usr/bin/yq https://github.com/mikefarah/yq/releases/download/v4.2.0/yq_linux_amd64 && chmod +x /usr/bin/yq
 
-RUN curl -fLo /usr/local/bin/bazel https://github.com/bazelbuild/bazelisk/releases/download/v1.11.0/bazelisk-linux-amd64 && \
+RUN curl -fLo /usr/local/bin/bazel https://github.com/bazelbuild/bazelisk/releases/download/v1.12.2/bazelisk-linux-amd64 && \
 		chown root:root /usr/local/bin/bazel && \
     chmod +x /usr/local/bin/bazel
 
-RUN curl -fLo /usr/local/bin/bazel-remote https://github.com/buchgr/bazel-remote/releases/download/v2.3.3/bazel-remote-2.3.3-linux-x86_64 && \
+RUN curl -fLo /usr/local/bin/bazel-remote https://github.com/buchgr/bazel-remote/releases/download/v2.3.8/bazel-remote-2.3.8-linux-x86_64 && \
 		chown root:root /usr/local/bin/bazel-remote && \
     chmod +x /usr/local/bin/bazel-remote
