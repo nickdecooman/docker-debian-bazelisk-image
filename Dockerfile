@@ -1,4 +1,4 @@
-FROM python:3.10-slim
+FROM python:3.11-slim
 
 ENV DEBIAN_FRONTEND="noninteractive"
 
@@ -12,6 +12,6 @@ RUN curl -fLo /usr/local/bin/bazel https://github.com/bazelbuild/bazelisk/releas
 		chown root:root /usr/local/bin/bazel && \
     chmod +x /usr/local/bin/bazel
 
-RUN curl -fLo /usr/local/bin/bazel-remote https://github.com/buchgr/bazel-remote/releases/download/v2.3.8/bazel-remote-2.3.8-linux-x86_64 && \
+RUN curl -fLo /usr/local/bin/bazel-remote https://github.com/buchgr/bazel-remote/releases/download/v2.4.1/bazel-remote-2.4.1-linux-x86_64 && \
 		chown root:root /usr/local/bin/bazel-remote && \
     chmod +x /usr/local/bin/bazel-remote
