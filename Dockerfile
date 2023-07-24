@@ -3,7 +3,7 @@ FROM python:3.10-slim
 ENV DEBIAN_FRONTEND="noninteractive"
 
 RUN apt-get -qqy update && \
-    apt-get -qqy install curl make openssl ca-certificates git build-essential zip unzip jq libz-dev && \
+    apt-get -qqy install curl make openssl ca-certificates git build-essential zip unzip jq libz-dev openssl libssl-dev && \
     apt-get clean && rm -rf /var/lib/{apt,dpkg,cache,log}/
 
 RUN curl -fLo /usr/bin/yq https://github.com/mikefarah/yq/releases/download/v4.2.0/yq_linux_amd64 && chmod +x /usr/bin/yq
